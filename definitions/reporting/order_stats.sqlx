@@ -29,7 +29,8 @@ select
   charges.payment_status as payment_status,
   charges.payment_method as payment_method,
   sum(orders.item_count) as item_count,
-  sum(charges.amount) as amount
+  sum(charges.amount) as amount,
+  max(order_timestamp) as last_order_timestemp
 from
   ${ref("stg_shopify_orders")} orders
   left join ${ref("stg_stripe_charges")} charges 
