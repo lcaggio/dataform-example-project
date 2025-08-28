@@ -1,7 +1,32 @@
 config {
-  type: "declaration",
-  schema: "stripe",
-  name: "charges",
-  tags: ["source"],
+  type: "table",
   description: "Raw stripe charges table"
 }
+
+select
+  3001 as id,
+  'succeeded' as payment_status,
+  'credit_card' as payment_method,
+  55.99 as amount,
+  'APPROVED' as status
+UNION ALL
+select
+  3002 as id,
+  'failed' as payment_status,
+  'debit_card' as payment_method,
+  12.50 as amount,
+  'APPROVED' as status
+UNION ALL
+select
+  3003 as id,
+  'succeeded' as payment_status,
+  'paypal' as payment_method,
+  120.00 as amount,
+  'DENIED' as status
+UNION ALL
+select
+  3004 as id,
+  'pending' as payment_status,
+  'credit_card' as payment_method,
+  34.75 as amount,
+  'APPROVED' as status

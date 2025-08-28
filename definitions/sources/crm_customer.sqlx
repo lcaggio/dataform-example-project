@@ -1,7 +1,33 @@
 config {
-  type: "declaration",
-  schema: "crm",
-  name: "customer",
-  tags: ["source"],
+  type: "table",
   description: "Raw CRM customers table"
 }
+
+select
+  1001 as id,
+  'John' as first_name,
+  'Doe' as last_name,
+  'john.doe@example.com' as email,
+  'us' as country
+UNION ALL
+select
+  1002 as id,
+  'Jane' as first_name,
+  'Smith' as last_name,
+  'jane.smith@example.com' as email,
+  'it' as country
+UNION ALL
+select
+  1003 as id,
+  null as first_name,
+  'Wonderland' as last_name,
+  'alice.w@example.com' as email,
+  'uk' as country
+UNION ALL
+select
+  1004 as id,
+  'Bob' as first_name,
+  'Builder' as last_name,
+  'bob.b@example.com' as email,
+  'ca' as country
+  

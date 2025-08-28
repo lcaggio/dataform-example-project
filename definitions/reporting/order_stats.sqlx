@@ -18,12 +18,6 @@ config {
     rowConditions: [
       "item_count >= 0"
     ]
-  },
-  redshift: {
-    sortKeys: ["order_date"],
-    sortStyle: "compound",
-    distStyle: "key",
-    distKey: "order_id"
   }
 }
 
