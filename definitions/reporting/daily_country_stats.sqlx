@@ -11,10 +11,6 @@ config {
   },
   assertions: {
     uniqueKey: ["date", "country"]
-  },
-  redshift: {
-    sortKeys: ["date"],
-    sortStyle: "compound"
   }
 }
 
@@ -27,6 +23,6 @@ select
 from
   ${ref("order_stats")} orders
   left join ${ref("customer_stats")} customers
-    on orders.customer_id = customers.id
+    on orders.customer_id = customers.customer_id
 group by
   1,2,3

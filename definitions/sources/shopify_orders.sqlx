@@ -1,7 +1,40 @@
 config {
-  type: "declaration",
-  schema: "shopify",
-  name: "orders",
-  tags: ["source"],
+  type: "table",
   description: "Raw shopify orders table"
 }
+
+select
+  2001 as id,
+  '2024-07-20' as date,
+  1001 as customer_id,
+  'completed' as order_status,
+  3001 as payment_id,
+  'OK' as status,
+  3 as item_count
+UNION ALL
+select
+  2002 as id,
+  '2024-07-21' as date,
+  1002 as customer_id,
+  'pending' as order_status,
+  3002 as payment_id,
+  'OK' as status,
+  1 as item_count
+UNION ALL
+select
+  2003 as id,
+  '2024-07-21' as date,
+  1001 as customer_id,
+  'shipped' as order_status,
+  3003 as payment_id,
+  'WAITING_PAYMENT' as status,
+  2 as item_count
+UNION ALL
+select
+  2004 as id,
+  '2024-07-22' as date,
+  1003 as customer_id,
+  'cancelled' as order_status,
+  3004 as payment_id,
+  'OK' as status,
+  0 as item_count
