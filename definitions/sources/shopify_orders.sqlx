@@ -10,7 +10,8 @@ select
   'completed' as order_status,
   3001 as payment_id,
   'OK' as status,
-  3 as item_count
+  3 as item_count,
+  PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', '2024-07-21 15:30:00') as order_timestamp
 UNION ALL
 select
   2002 as id,
@@ -19,7 +20,8 @@ select
   'pending' as order_status,
   3002 as payment_id,
   'OK' as status,
-  1 as item_count
+  1 as item_count,
+  PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', '2024-07-22 15:30:00') as order_timestamp
 UNION ALL
 select
   2003 as id,
@@ -28,7 +30,8 @@ select
   'shipped' as order_status,
   3003 as payment_id,
   'WAITING_PAYMENT' as status,
-  2 as item_count
+  2 as item_count,
+  PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', '2024-07-23 15:30:00') as order_timestamp
 UNION ALL
 select
   2004 as id,
@@ -37,4 +40,5 @@ select
   'cancelled' as order_status,
   3004 as payment_id,
   'OK' as status,
-  0 as item_count
+  0 as item_count,
+  PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', '2024-07-24 15:30:00') as order_timestamp
