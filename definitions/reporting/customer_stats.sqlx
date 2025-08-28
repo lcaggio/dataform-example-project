@@ -15,15 +15,11 @@ config {
   assertions: {
     nonNull: ["first_name", "last_name", "customer_id", "email"],
     uniqueKey: ["customer_id"]
-  },
-  redshift: {
-    distStyle: "key",
-    distKey: "id"
   }
 }
 
 select
-  customers.customer_id as id,
+  customers.customer_id as customer_id,
   customers.first_name as first_name,
   customers.last_name as last_name,
   customers.email as email,
