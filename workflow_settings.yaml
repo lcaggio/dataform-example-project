@@ -1,6 +1,4 @@
 defaultProject: lcaggio-argolis
-defaultDataset: example
-defaultAssertionDataset: example_assertions
+defaultDataset: dataform_retail
+defaultAssertionDataset: dataform_retail_assertions
 dataformCoreVersion: 3.0.26
-vars:
-    environmentName: "development"

@@ -10,4 +10,4 @@ select
   payment_method,
   coalesce(cast(amount as numeric), 0.0) as amount
 from
-  ${ref("stripe_charges")}
+  ${ref("src_stripe_charges")}

@@ -29,7 +29,7 @@ select
   sum(orders.amount) as total_spent
 from
   ${ref("stg_crm_customers")} customers
-  left join ${ref("order_stats")} orders 
+  left join ${ref("rpt_order_stats")} orders 
     on customers.customer_id = orders.customer_id
 where
   customers.customer_id is not null
