@@ -19,7 +19,7 @@ select
 UNION ALL
 select
   1003 as id,
-  null as first_name,
+  'Sam' as first_name,
   'Wonderland' as last_name,
   'alice.w@example.com' as email,
   'uk' as country

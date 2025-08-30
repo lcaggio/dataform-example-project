@@ -11,6 +11,6 @@ select
   email,
   country
 from
-  ${ref("crm_customer")}
+  ${ref("src_crm_customer")}
 
   

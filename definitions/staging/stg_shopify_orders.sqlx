@@ -13,4 +13,4 @@ select
   coalesce(cast(item_count as int), 0) as item_count
   -- ,order_timestamp
 from
-  ${ref("shopify_orders")}
+  ${ref("src_shopify_orders")}
