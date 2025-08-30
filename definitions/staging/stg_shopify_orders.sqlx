@@ -10,7 +10,7 @@ select
   customer_id,
   status as order_status,
   payment_id,
-  coalesce(cast(item_count as int), 0) as item_count,
-  order_timestamp
+  coalesce(cast(item_count as int), 0) as item_count
+  -- ,order_timestamp
 from
   ${ref("shopify_orders")}
