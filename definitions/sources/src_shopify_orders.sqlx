@@ -12,6 +12,7 @@ select
   'OK' as status,
   3 as item_count
   ,PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', '2024-07-21 15:30:00') as order_timestamp
+  , 1 as test
 UNION ALL
 select
   2002 as id,
@@ -22,6 +23,7 @@ select
   'OK' as status,
   1 as item_count
   ,PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', '2024-07-22 15:30:00') as order_timestamp
+  , 1 as test
 UNION ALL
 select
   2003 as id,
@@ -32,6 +34,7 @@ select
   'WAITING_PAYMENT' as status,
   2 as item_count
   ,PARSE_TIMESTAMP('%Y-%m-%d %H:%M:%S', '2024-07-23 15:30:00') as order_timestamp
+  , 1 as test
 UNION ALL
 select
   2004 as id,
