@@ -11,6 +11,6 @@ select
   status as order_status,
   payment_id,
   coalesce(cast(item_count as int), 0) as item_count
-  -- ,order_timestamp
+  ,order_timestamp
 from
   ${ref("src_shopify_orders")}
